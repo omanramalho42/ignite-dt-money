@@ -1,54 +1,54 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SearchFormContainer = styled.form`
+  display: flex;
+  gap: 1rem;
+
+  input {
+    flex: 1;
+    border-radius: 6px;
+    border: 0;
+
+    background-color: ${(props) => props.theme['gray-900']};
+    color: ${(props) => props.theme['gray-300']};
+
+    padding: 1rem;
+
+    &::placeholder {
+      color: ${(props) => props.theme['gray-900']};
+    }
+  }
+
+  button {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
 
-    input {
-        flex: 1;
-        border-radius: 6px;
-        border: 0;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid ${(props) => props.theme['green-300']};
+    border-radius: 6px;
 
-        background-color: ${props => props.theme["gray-900"]};
-        color: ${props => props.theme["gray-300"]};
+    padding: 1rem;
 
-        padding: 1rem;
+    font-weight: bold;
+    color: ${(props) => props.theme['gray-300']};
 
-        &::placeholder {
-            color: ${props => props.theme["gray-900"]};    
-        }
+    &:disabled {
+      opacity: 0.7;
     }
 
-    button {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
+    &:not(:disabled):hover {
+      background-color: ${(props) => props.theme['gray-500']};
 
-        border: 0;
-        background-color: transparent;
-        border: 1px solid ${props => props.theme["green-300"]};
-        border-radius: 6px;
-        
-        padding: 1rem;
-        
-        font-weight: bold;
-        color: ${props => props.theme["gray-300"]};
+      border: 1px solid ${(props) => props.theme['gray-500']};
 
-        &:disabled {
-            opacity: .7;
-        }
-        
-        &:not(:disabled):hover {
-            background-color: ${props => props.theme["gray-500"]};
-        
-            border: 1px solid ${props => props.theme["gray-500"]};
-        
-            color: ${props => props.theme.white};
-        
-            transition: 
-                background-color 0.2s, 
-                color 0.2s, 
-                border-color 0.2s;
-        }
+      color: ${(props) => props.theme.white};
+
+      transition:
+        background-color 0.2s,
+        color 0.2s,
+        border-color 0.2s;
     }
-`;
+  }
+`

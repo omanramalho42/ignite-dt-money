@@ -1,52 +1,44 @@
 import React from 'react'
-import { SummaryCard, SummaryContainer } from './styles'
+
+import useSummary from '../../hooks/useSummary'
+
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from 'phosphor-react'
-import { priceFormatter } from '../../utils/formatter';
-import useSummary from '../../hooks/useSummary';
 
-const Summary:React.FC = () => {
-    const summary = useSummary();
+import { priceFormatter } from '../../utils/formatter'
 
-    return (
-        <SummaryContainer>
-            <SummaryCard>
-                <header>
-                    <span>
-                        Entradas
-                    </span>
-                    <ArrowCircleUp size={32} color="#00b37e" />
-                </header>
+import { SummaryCard, SummaryContainer } from './styles'
 
-                <strong>
-                    {priceFormatter.format(summary.income)}
-                </strong>
-            </SummaryCard>
-            <SummaryCard>
-                <header>
-                    <span>
-                        Saidas
-                    </span>
-                    <ArrowCircleDown size={32} color="#F75A68" />
-                </header>
+const Summary: React.FC = () => {
+  const summary = useSummary()
 
-                <strong>
-                    {priceFormatter.format(summary.outcome)}
-                </strong>
-            </SummaryCard>
-            <SummaryCard variant='green'>
-                <header>
-                    <span>
-                        Total
-                    </span>
-                    <CurrencyDollar size={32} color="#fff" />
-                </header>
+  return (
+    <SummaryContainer>
+      <SummaryCard>
+        <header>
+          <span>Entradas</span>
+          <ArrowCircleUp size={32} color="#00b37e" />
+        </header>
 
-                <strong>
-                    {priceFormatter.format(summary.total)}
-                </strong>
-            </SummaryCard>
-        </SummaryContainer>
-    )
+        <strong>{priceFormatter.format(summary.income)}</strong>
+      </SummaryCard>
+      <SummaryCard>
+        <header>
+          <span>Saidas</span>
+          <ArrowCircleDown size={32} color="#F75A68" />
+        </header>
+
+        <strong>{priceFormatter.format(summary.outcome)}</strong>
+      </SummaryCard>
+      <SummaryCard variant="green">
+        <header>
+          <span>Total</span>
+          <CurrencyDollar size={32} color="#fff" />
+        </header>
+
+        <strong>{priceFormatter.format(summary.total)}</strong>
+      </SummaryCard>
+    </SummaryContainer>
+  )
 }
 
 export default Summary

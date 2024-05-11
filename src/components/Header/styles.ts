@@ -1,40 +1,40 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-    background-color: ${props => props.theme["gray-900"]};
-    padding: 2.5rem 0 7.5rem;
-`;
+  background-color: ${(props) => props.theme['gray-900']};
+  padding: 2.5rem 0 7.5rem;
+`
 
 export const HeaderContent = styled.div`
-    width: 100%;
-    max-width: 1120px;
+  width: 100%;
+  max-width: 1120px;
 
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
 
 export const NewTransactionButton = styled.button`
-    width: auto;
-    height: 50px;
-    border: 0;
+  width: auto;
+  height: 50px;
+  border: 0;
 
-    background-color: ${props => props.theme["green-300"]};
-    color: ${props => props.theme.white};
+  background-color: ${(props) => props.theme['green-300']};
+  color: ${(props) => props.theme.white};
 
-    font-weight: bold;
-    
-    padding: 0 1.25rem;
+  font-weight: bold;
 
-    border-radius: 6px;
+  padding: 0 1.25rem;
 
-    cursor: pointer;
+  border-radius: 6px;
 
-    &:hover {
-        background-color: ${props => props.theme["green-700"]};
-        transition: background-color 0.2s;
-    }
-`;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => props.theme['green-700']};
+    transition: background-color 0.2s;
+  }
+`
