@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Desenolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2024-05-11T14:57:42.047Z"
+    },
+    {
+      "id": "2",
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2024-04-11T14:57:42.047Z"
+    },
+    {
+      "id": "e41a",
+      "description": "Venda de produto de limpeza",
+      "category": "Venda",
+      "type": "income",
+      "price": 1200,
+      "createdAt": "2024-05-11T20:12:37.574Z"
+    },
+    {
+      "id": "1c4f",
+      "description": "Café",
+      "category": "Compra",
+      "type": "outcome",
+      "price": 12,
+      "createdAt": "2024-05-11T20:18:52.356Z"
+    },
+    {
+      "id": "757f",
+      "description": "Milho",
+      "category": "Compra",
+      "type": "outcome",
+      "price": 2,
+      "createdAt": "2024-05-11T20:19:27.143Z"
+    },
+    {
+      "id": "0d5e",
+      "description": "Tapioca",
+      "category": "Alimentação",
+      "type": "outcome",
+      "price": 12,
+      "createdAt": "2024-05-11T20:27:25.150Z"
+    }
+  ]
+}
