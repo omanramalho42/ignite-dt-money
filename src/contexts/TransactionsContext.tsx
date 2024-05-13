@@ -36,12 +36,12 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<TransactionsProps[]>([])
 
   const fetchTransactions = useCallback(
-    async (query: string = ''): Promise<void> => {
+    async (query?: string): Promise<void> => {
       const { data } = await api.get('transactions', {
         params: {
           q: query,
           _sort: 'createdAt',
-          // _order: "desc",
+          _order: "desc",
         },
       })
 
